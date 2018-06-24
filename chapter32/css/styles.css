@@ -1,0 +1,22 @@
+/*  
+## 擬似クラス
+- 要素の状態に基づいてスタイリング
+
+## 擬似要素
+- 要素の特定の部分をスタイリング
+*/
+
+#open {
+  width: 100px;
+  background-color: skyblue;
+  text-align: center;
+  padding: 4px 8px;
+}
+
+/* ここからhoverの擬似クラス */
+#open:hover {
+  /* opacityは透明度を表すプロパティ */
+  opacity: .8;
+  /* cursorプロパティでpointerを指定 */
+  cursor: pointer;
+}
