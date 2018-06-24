@@ -1,0 +1,18 @@
+/* a[href="#"] {
+  font-weight: bold;
+} */
+
+/* 前方一致には正規表現のキャレット(^)記号を使う */
+/* a[href^="http"] {
+  font-weight: bold;
+} */
+
+/* 後方一致には正規表現のダラー($)記号を使う */
+/* a[href$="com"] {
+  font-weight: bold;
+} */
+
+/* 部分一致には正規表現のアスタリスク(*)記号を使う */
+a[href*="taguchi"] {
+  font-weight: bold;
+}
