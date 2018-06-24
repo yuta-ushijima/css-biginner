@@ -1,0 +1,20 @@
+h1, h2, p {
+  border: 1px solid silver;
+}
+
+img {
+  /* float: right;で画像を右寄せ */
+  float: right;
+}
+
+h2 {
+  /* clearが適用できるのは display:block されている要素だけ */
+  /* float: right;した要素に対してclearする */
+  clear: right;
+
+  /* float: left;した要素に対してclearする */
+  /* clear: left; */
+
+  /* 左右両方にfloatした要素に対してclearする */
+  /* clear: both; */
+}
