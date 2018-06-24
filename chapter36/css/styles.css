@@ -1,0 +1,18 @@
+/* !importantはスタイルに置いてもっとも優先度が高くなるので、
+index.htmlに書いたインラインのスタイルよりもこちらが優先される */
+h1 { color:  red !important; }
+
+/* !importantを複数書いた場合、CSSの原則により
+後から!importantを書いた方が優先されるので
+文字色は黄色になる */
+h1#main.box { color: yellow !important; }
+
+/* この場合はidが2つあるのでもっとも詳細度が高いので、
+ 現状grayが文字色になる*/
+#about > #main { color: gray; }
+
+/* #about > #main以外のスタイルの中で一番詳細度が高いので、
+現状blueがtitleタグに適用される */
+section > #main.title { color: blue; }
+
+section#about > h1 { color: pink; }
