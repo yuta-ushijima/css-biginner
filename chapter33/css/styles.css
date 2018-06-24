@@ -1,0 +1,42 @@
+/* 同じ階層に並んでいるp要素の内、
+3番目のp要素にスタイルを適用させる */
+/* .main > p:nth-child(3) {
+  background-color: pink;
+} */
+
+
+/* 同じ階層に並んでいるp要素の内、
+3の倍数に該当するp要素にスタイルを適用させる */
+/* .main > p:nth-child(3n) {
+  background-color: pink;
+} */
+
+/* 同じ階層に並んでいるp要素の内、
+奇数に該当するp要素にスタイルを適用させる */
+/* .main > p:nth-child(odd) {
+  background-color: pink;
+} */
+
+/* 同じ階層に並んでいるp要素の内、
+偶数に該当するp要素にスタイルを適用させる */
+/* .main > p:nth-child(even) {
+  background-color: skyblue;
+} */
+
+/* 同じ階層に並んでいるp要素の内、
+一番最初に該当するp要素にスタイルを適用させる */
+/* .main > p:first-child {
+  background-color: pink;
+} */
+
+/* 同じ階層に並んでいるp要素の内、
+一番最後に該当するp要素にスタイルを適用させる */
+/* .main > p:last-child {
+  background-color: skyblue;
+} */
+
+/* 同じ階層に並んでいるp要素の内、
+一番最後以外のp要素にスタイルを適用させる */
+.main > p:not(:last-child) {
+  border-bottom: 1px dashed silver;
+}
