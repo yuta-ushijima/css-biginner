@@ -1,0 +1,16 @@
+/* beforeとafterで擬似要素で整形する。
+擬似要素にはcontentプロパティが必須 */
+/* h1::before {
+  content: "- ";
+}
+
+h1::after {
+  content: " -";
+} */
+
+/* HTMLのdata属性は要素に対してdataをもたせることができる属性で、どうするかというと、 
+data-xxxxのように自分で情報の名前を付けることができる。 */
+h1::after {
+  /* attr()を使って渡したいdata属性の名前を指定する*/
+  content: attr(data-subtitle);
+}
