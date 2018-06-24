@@ -1,32 +1,22 @@
-section {
-  border: 1px solid silver;
-  padding: 10px;
-  margin-bottom: 10px;
+/* p {
+  /*以下のように指定すると、最後の要素にも点線がついてしまう。 */
+  /*border-bottom: 1px dashed silver; 
 }
-
-/*「>」...mainクラスの直下にあるh1タグについて適用させる*/
-/* .main > h1 {
-  border-left: 5px solid skyblue;
-} */
-
-/* 以下のように半角スペースをあけると、mainクラスに含まれる、
-全てのh1タグに対してスタイルを適用させることになる。*/
-/* .main h1 {
-  border-left: 5px solid skyblue;
-} */
-
-/*以下のように「,」で区切ると、mainクラスとh1タグについて
-スタイルを適用させるという意味になる*/
-.main, h1 {
-  border-left: 5px solid skyblue; 
-}
-
-/*まとめ
-
-不等号記号を使うと、 main の直下の h1 という意味になります。
-
-半角空白で区切ると、 main の中のすべての h1 という意味になります。
-
-「,」で区切ると、 main および h1 に対してスタイルを適応するという意味なので覚えておきましょう。
-
 */
+
+/*
+p {
+  /*以下のように指定すると、最初の要素にも点線がついてしまう。 */
+  /* border-top: 1px dashed silver;
+}
+*/
+
+/* 「p + p」のように隣接結合子を使うことで、
+  要素の間にだけ点線のスタイルがつくようになる。
+  「+」の隣接結合子は、左辺の次にくる右辺の要素という意味になる。
+  今回の場合、最初のp要素の次にくるp要素に対してスタイルを適用するという意味。 */
+p + p {
+  border-top: 1px dashed silver; 
+  /* padding-topで余白をつける */
+  padding-top: 10px; 
+}
