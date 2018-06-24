@@ -1,0 +1,52 @@
+/* nth-childは、あくまでも同じ階層のある要素の内、何番目に
+該当するかを見ているので、p要素以外がmainクラスの3番目にあると
+スタイルは適用されない */
+.main > p:nth-child(3) {
+  background-color: pink;
+}
+
+/*もし3番目の要素にh2があった場合、h2をnth-childに
+指定する必要がある  */
+/* .main > h2:nth-child(3) {
+  background-color: pink;
+} */
+
+/* nth-of-typeを使えば、同じ階層に並んでいる要素があったとき、
+同じ種類の要素が何番目にあるかを指定できる
+以下の場合、同じ階層にあるp要素が何番目にあるかを指定している。
+p要素の間にh2などの他の要素があったとしても、無視される */
+.main > p:nth-of-type(3) {
+  background-color: pink;
+}
+
+/* また、nth-of-typeはnth-of-childと同様の使い方ができる */
+
+/* 倍数 */
+.main > p:nth-of-type(3n) {
+  background-color: red;
+}
+
+/* 奇数 */
+.main > p:nth-of-type(odd) {
+  background-color: yellow;
+}
+
+/* 偶数 */
+.main > p:nth-of-type(even) {
+  background-color: green;
+}
+
+/* 一番最初 */
+.main > p:first-of-type {
+  background-color: gold;
+}
+
+/* 一番最後 */
+.main > p:last-of-type {
+  background-color: brown;
+}
+
+/* 一番最後以外 */
+.main > h1:not(:last-of-type) {
+  background-color: blueviolet;
+}
